@@ -7,7 +7,7 @@ Recommended using [Homestead](http://laravel.com/docs/4.2/homestead) for develop
 
 ### 1. Clone the repo
 
-    git clone https://github.com/manoj
+    git clone https://github.com/srinivasaphp
 
 ### 2. Composer install
 
