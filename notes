@@ -1,0 +1,38 @@
+*************************************************************
+MUTATORS USE SETATTRIBUTE
+
+	public function setFirstNameAttribute($value) { //first_name
+        $this->attributes['first_name'] = ucfirst($value);
+    }
+
+*************************************************************
+ACCESSORS USE GETATTRIBUTE
+
+	public function getCreatedAtAttribute($value){   //created_at
+        $formatted = new Carbon($value);
+        return $formatted->diffForHumans();
+//        return $formatted->format('d/m/Y G:i:s');
+    }
+
+*************************************************************
+SAVING NOTE WITH SPECIFIC CARD
+	$note = new Note;
+    $note->body =$request->body;
+    $card->notes()->save($note) // saving the specific card_id to that note
+    
+    redirect back();
+
+*************************************************************
+VALIDATE ARRAYS
+
+	$this->validate($request,[
+		'email.*' => 'required|email'
+	],[
+		'email.*' => 'Please enter a valid email adress'
+	]);
+	
+	return 'validation OK';
+
+
+*************************************************************
+
